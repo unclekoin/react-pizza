@@ -4,19 +4,10 @@ import Header from './components/Header';
 import Categories from './components/Categories';
 import Sort from './components/Sort';
 import PizzaBlock from './components/PizzaBlock';
+import cards from './assets/db/pizzas.json';
 
 const App = () => {
-  const cards = [
-    {id: 1, title: 'Чизбургер-пицца', price: 395},
-    {id: 2, title: 'Четыре сыра', price: 495},
-    {id: 3, title: 'Чизбургер-пицца', price: 350},
-    {id: 4, title: 'Чизбургер-пицца', price: 395},
-    {id: 5, title: 'Чизбургер-пицца', price: 395},
-    {id: 6, title: 'Чизбургер-пицца', price: 395},
-    {id: 7, title: 'Чизбургер-пицца', price: 395},
-    {id: 8, title: 'Чизбургер-пицца', price: 395},
-    {id: 9, title: 'Чизбургер-пицца', price: 395},
-  ];
+  console.log(cards)
   return (
     <div>
       <div className="wrapper">
