@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 const Categories = () => {
-  const [activeCategory, setActiveCategory] = useState(null);
+  const [activeCategory, setActiveCategory] = useState('1');
 
   const categories = [
     { _id: '1', name: 'Все' },
@@ -11,10 +11,6 @@ const Categories = () => {
     { _id: '5', name: 'Острые' },
     { _id: '6', name: 'Закрытые' },
   ];
-
-  useEffect(() => {
-    setActiveCategory(categories[0]._id);
-  }, []);
 
   const categoryHandler = (id) => {
     setActiveCategory(id);

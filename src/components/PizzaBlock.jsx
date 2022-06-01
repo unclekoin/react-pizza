@@ -23,7 +23,7 @@ const PizzaBlock = ({ title, imageUrl, price, sizes, types }) => {
                 : types.length === 1
                 ? 'active'
                 : null }
-              key={ typeName[type] }
+              key={ type }
             >
               { typeName[type] }
             </li>) }
