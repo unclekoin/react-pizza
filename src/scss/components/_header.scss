@@ -4,10 +4,28 @@
   border-bottom: 1px solid $gray-line;
   padding: 40px 0;
 
+  @media (max-width: 768px) {
+    padding: 20px 0;
+  }
+
+  @media (max-width: 576px) {
+    padding: 70px 0 10px;
+  }
+
   .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  a {
+    @media (max-width: 768px) {
+      align-self: self-start;
+    }
   }
 
   &__logo {
@@ -20,13 +38,25 @@
     h1 {
       color: #181818;
       font-size: 24px;
-      letter-spacing: 1%;
+      letter-spacing: 1px;
       text-transform: uppercase;
       font-weight: 800;
     }
 
     p {
       color: #7b7b7b;
+    }
+  }
+
+  &__cart {
+    @media (max-width: 768px) {
+      align-self: flex-end;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 576px) {
+      position: fixed;
+      top: 20px;
     }
   }
 }
