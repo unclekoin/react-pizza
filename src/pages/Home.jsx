@@ -25,7 +25,7 @@ function Home() {
   }, []);
 
   return (
-    <>
+    <div className='container'>
       <div className="content__top">
         <Categories/>
         <Sort/>
@@ -35,7 +35,7 @@ function Home() {
         { items.map((item, index) => (isLoading ? <Skeleton key={ index }/> :
           <Card key={ item.id } { ...item } />)) }
       </div>
-    </>
+    </div>
   );
 }
 

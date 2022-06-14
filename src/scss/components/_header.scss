@@ -26,6 +26,10 @@
     @media (max-width: 768px) {
       align-self: self-start;
     }
+
+    @media (max-width: 576px) {
+      align-self: center;
+    }
   }
 
   &__logo {
@@ -52,11 +56,13 @@
     @media (max-width: 768px) {
       align-self: flex-end;
       margin-bottom: 10px;
+      z-index: 100;
     }
 
     @media (max-width: 576px) {
       position: fixed;
       top: 20px;
+      opacity: 0.75;
     }
   }
 }

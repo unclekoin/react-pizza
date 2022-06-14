@@ -7,6 +7,10 @@
     align-self: self-start;
   }
 
+  @media (max-width: 576px) {
+    align-self: center;
+  }
+
   &__label {
     display: flex;
     align-items: center;
