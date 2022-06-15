@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Cart() {
   return (
@@ -272,15 +273,15 @@ function Cart() {
             <span> Сумма заказа: <b>900 ₽</b> </span>
           </div>
           <div className="cart__bottom-buttons">
-            <a className="button button--outline button--add go-back-btn" href="/">
+            <Link  to="/" className="button button--outline button--add go-back-btn" >
               <svg fill="none" height="14" viewBox="0 0 8 14" width="8"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M7 13L1 6.93015L6.86175 1" stroke="#D3D3D3" strokeLinecap="round"
                       strokeLinejoin="round" strokeWidth="1.5"/>
               </svg>
 
-              <span>Вернуться назад</span>
-            </a>
+              <li>Вернуться назад</li>
+            </Link>
             <div className="button pay-btn">
               <span>Оплатить сейчас</span>
             </div>
