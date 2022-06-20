@@ -19,6 +19,10 @@
       margin-right: 8px;
     }
 
+    &.rotate svg {
+      transform: rotate(180deg);
+    }
+
     b {
       margin-right: 8px;
     }
@@ -28,6 +32,12 @@
       border-bottom: 1px dashed $orange;
       cursor: pointer;
     }
+  }
+
+  &__button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
   }
 
   &__popup {

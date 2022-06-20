@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-const Categories = ({ value, onClickCategory }) => {
+const Categories = ({ value, changeCategory }) => {
   const categories = [
-    { _id: '0', name: 'Все' },
+    { _id: null, name: 'Все' },
     { _id: '1', name: 'Мясные' },
     { _id: '2', name: 'Вегетарианская' },
     { _id: '3', name: 'Гриль' },
@@ -15,7 +15,7 @@ const Categories = ({ value, onClickCategory }) => {
       <ul>
         { categories.map(({ _id, name }) =>
           <li
-            onClick={ () => onClickCategory(_id) }
+            onClick={ () => changeCategory(_id) }
             className={ _id === value ? 'active' : null }
             key={ _id }
             id={ _id }
