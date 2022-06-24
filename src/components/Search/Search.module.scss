@@ -1,0 +1,42 @@
+.root {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 10px 10px 30px;
+  font: inherit;
+  font-size: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+
+  &::placeholder {
+    font-family: 'Nunito', sans-serif;
+  }
+
+  &:focus {
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+.search {
+  position: absolute;
+  top: 8px;
+  left: 7px;
+  width: 22px;
+  opacity: 0.3;
+}
+
+.close {
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  opacity: 0.4;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
