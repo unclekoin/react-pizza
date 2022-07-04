@@ -5,7 +5,7 @@ import Sort from '../components/Sort';
 import Skeleton from '../components/PizzaBlock/Skeleton';
 import Card from '../components/PizzaBlock/Card';
 
-function Home() {
+function Home({ searchValue }) {
   const [items, setItems] = useState(new Array(6).fill(1));
   const [isLoading, setLoading] = useState(true);
   const [categoryId, setCategoryId] = useState(null);
@@ -17,12 +17,13 @@ function Home() {
     const category = categoryId ? `category=${ categoryId }` : '';
     const sort = `sortBy=${ sortType }`;
     const order = `order=${ orderType }`;
+    const search = searchValue ? `search=${searchValue}` : '';
 
     setLoading(true);
 
     const fetchData = async () => {
       try {
-        const url = `${ baseUrl }?${ category }&${ sort }&${ order }`;
+        const url = `${ baseUrl }?${ category }&${ sort }&${ order }&${search}`;
         const response = await fetch(url);
         const data = await response.json();
         setItems(data);
@@ -33,7 +34,12 @@ function Home() {
     };
     fetchData();
     window.scrollTo(0, 0);
-  }, [categoryId, sortType, orderType]);
+  }, [categoryId, sortType, orderType, searchValue]);
+
+  const searchedItems = searchValue
+    ? items.filter((item) =>
+      item.title.toLowerCase().includes(searchValue.toLowerCase()))
+    : items;
 
   return (
     <div className="container">
